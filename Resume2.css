@@ -1,0 +1,170 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+}
+
+body {
+        /* background-color: #2034cc9a;*/
+        background: #081b29; 
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 10%;
+    background: rgba(10, 10, 10, 0.37);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.navbar a {
+    font-size: 20px;
+    color: rgb(252, 248, 248);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+     color: rgb(8, 165, 227);
+}
+
+.container {
+    background: #f5f5f5;
+    background: lightsteelblue;
+    max-width: 800px;
+    margin: 60px auto;
+    height: 1470px;
+    padding: 20px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0, .3);
+}
+
+.header-text {
+    text-align: center;
+}
+
+.header-text h1{
+    margin-bottom: 10px;
+}
+
+.header-text h3 {
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.img-area {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 25px auto;
+    border: 15px groove deepskyblue;
+}
+
+.img-area img {
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left {
+    flex: 1;
+    padding: 30px;
+}
+
+.left p {
+    line-height: 2;
+}
+
+.left ul li {
+    line-height: 2;
+} 
+
+h2 {
+    background: #00b6c4;
+    padding: 15px;
+    color: #fff;
+    margin: 30px 0;
+    font-size: 20px;
+    border-radius: 0 50px 50px 0;
+}
+
+.right {
+    flex: 1;
+    padding: 30px;
+}
+
+.right h3 {
+    margin-bottom: 15px;
+}
+
+.right p {
+    line-height: 2;
+}
+
+.right ul li {
+    line-height: 2;
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+@media only screen and (main-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 95%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        flex-direction: column;
+    }
+    .left,
+    .right {
+        flex: none;
+        width: 100%;
+    }
+    
+    .container {
+        width: 95%;
+        height: auto;
+    }
+    h2 {
+        font-size: 15px;
+    }
+}
